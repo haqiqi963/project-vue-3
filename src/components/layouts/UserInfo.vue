@@ -1,25 +1,6 @@
 <script setup>
 import { ref } from "vue";
 import { useRouter } from "vue-router";
-
-const router = useRouter();
-
-const props = defineProps({
-	user: Object,
-});
-
-const show = ref(false);
-
-function toggleDropdown() {
-	show.value = !show.value;
-}
-
-function logout() {
-	localStorage.clear("access_token");
-	localStorage.clear("token_type");
-
-	router.push("/login");
-}
 </script>
 
 <template>
